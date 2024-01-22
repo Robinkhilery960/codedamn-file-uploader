@@ -1,2 +1,2 @@
  
-tabs: ['index.html'] 
+tabs: ['./client/index.html'] 
