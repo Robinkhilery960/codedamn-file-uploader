@@ -18,7 +18,9 @@ const storage = multer.diskStorage({
 });
   
 const upload = multer({ storage: storage })
-  
+app.post("/upload", upload.single('file'), (req, res) => {
+    res.json({ file: req.file });
+  });
 app.listen(1337, () => {
     console.log('Server is running on port 1337');
 });
